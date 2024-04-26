@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -24,7 +23,7 @@ type Torrent struct {
 }
 
 func main() {
-	file, err := os.Open("puppy.torrent")
+	file, err := os.Open("example.torrent")
 
 	if err != nil {
 		log.Fatal(err)
@@ -36,5 +35,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(obj.Announce, obj.CreationDate)
+	getPeersList(obj.Announce)
 }
