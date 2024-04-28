@@ -2,3 +2,5 @@ github.com/jackpal/bencode-go v1.0.2 h1:LcCNfZ344u0LpBPOZNjpCLps/wUOuN4r87Fy9+5y
 github.com/jackpal/bencode-go v1.0.2/go.mod h1:6jI9mUjO3GQbZti3JizEfxTzRfWOM8oBBcwbwlTfceI=
 github.com/marksamman/bencode v0.0.0-20150821143521-dc84f26e086e h1:KMs6SK8iDSR1+ZzOK10L5wGPpWDByyvOe5nrqk51g2U=
 github.com/marksamman/bencode v0.0.0-20150821143521-dc84f26e086e/go.mod h1:+AHfJo5+69p+fjvMJTmYajNP9rFBHQcaTDFmuXRRATI=
+github.com/phuslu/log v1.0.92 h1:ijQW+X/uBPjwy8z4YYSGVoD1G/7JdwokxooSKJMQej8=
+github.com/phuslu/log v1.0.92/go.mod h1:F8osGJADo5qLK/0F88djWwdyoZZ9xDJQL1HYRHFEkS0=
