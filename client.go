@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bittorrent-client/tracker"
+	"fmt"
 	"log"
 	"os"
 
@@ -14,7 +16,7 @@ type Info struct {
 	Length      uint32
 }
 
-type Torrent struct {
+type TorrentFile struct {
 	Announce     string
 	CreatedBy    string `bencode:"created by"`
 	CreationDate uint32 `bencode:"creation date"`
@@ -30,10 +32,12 @@ func main() {
 	}
 	defer file.Close()
 
-	obj := Torrent{}
+	obj := TorrentFile{}
 	err = bencode.Unmarshal(file, &obj)
 	if err != nil {
 		log.Fatal(err)
 	}
-	getPeersList(obj.Announce)
+	tracker := tracker.New(obj.Announce)
+	connectResponse := tracker.Connect()
+	fmt.Println(connectResponse)
 }
